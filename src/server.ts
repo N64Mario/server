@@ -21,7 +21,6 @@ http.listen(3000, function () {
 let counter = 0;
 // Define your Socket.IO event listeners here
 socketIo.on("connection", function (socket: any) {
-  console.log("A user connected");
 
   // Example: Sending a message to the client when they connect
   socket.emit("welcome", "Welcome to the server!");
@@ -29,16 +28,15 @@ socketIo.on("connection", function (socket: any) {
   // Define your custom event listeners for this socket
 
   socket.on("send", () => {
-    console.log(counter);
     const datas = [
       "https://wa.me/919863771515",
       "https://wa.me/916009358837",
       "https://wa.me/919366570296",
       "https://wa.me/918787341056",
       "https://wa.me/+919366395692",
+      "https://wa.me/+918837058351",
       "https://wa.me/+918787341056",
       "https://wa.me/+919863970982",
-      "https://wa.me/+918837058351",
       "https://wa.me/916009417168",
       "https://wa.me/919863436782",
       "https://wa.me/+918837035599",
@@ -53,9 +51,9 @@ socketIo.on("connection", function (socket: any) {
       "https://wa.me/+917005955913",
       "https://wa.me/+919366341553",
       "https://wa.me/+917005810975",
+      "https://wa.me/+916009626040",
       "https://wa.me/+919366456244",
-      "https://wa.me/+916909942042",
-      "https://wa.me/+918119063915",
+      "https://wa.me/+918119060528",
     ];
     counter = (counter + 1) % datas.length;
     socket.emit("send__number", datas[counter]);
