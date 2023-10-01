@@ -29,7 +29,7 @@ socketIo.on("connection", function (socket: any) {
 
   socket.on("send", () => {
     const datas = [
-      "https://chat.whatsapp.com/Co5vAd3aZTc6HxEOXkGuVx"
+      "https://chat.whatsapp.com/IJanTFlCORc5WC5BZ0FegE"
     ];
     counter = (counter + 1) % datas.length;
     socket.emit("send__number", datas[counter]);
