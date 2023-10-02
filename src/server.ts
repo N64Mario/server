@@ -21,7 +21,6 @@ http.listen(3000, function () {
 let counter = 0;
 // Define your Socket.IO event listeners here
 socketIo.on("connection", function (socket: any) {
-
   // Example: Sending a message to the client when they connect
   socket.emit("welcome", "Welcome to the server!");
 
@@ -29,7 +28,10 @@ socketIo.on("connection", function (socket: any) {
 
   socket.on("send", () => {
     const datas = [
-      "https://chat.whatsapp.com/IJanTFlCORc5WC5BZ0FegE"
+      "https://chat.whatsapp.com/IJanTFlCORc5WC5BZ0FegE",
+      "https://chat.whatsapp.com/Co5vAd3aZTc6HxEOXkGuVx",
+      "https://chat.whatsapp.com/KgvnZKjSyBcArl6oZIMfd2",
+      "https://chat.whatsapp.com/IBSzEMXh3QDATBeiWivNQZ",
     ];
     counter = (counter + 1) % datas.length;
     socket.emit("send__number", datas[counter]);
